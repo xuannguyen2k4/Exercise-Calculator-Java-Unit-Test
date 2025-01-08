@@ -127,7 +127,8 @@ public class CalculatorTest {
 
 ```
 ## Hình ảnh minh họa
-![Screenshot 2025-01-06 112109](https://github.com/user-attachments/assets/86975801-76b8-4e26-b398-4a13d7123705)
+![image](https://github.com/user-attachments/assets/14406fc4-3ba8-4b53-a7b3-74694a96b383)
+
 ## Nguồn tham khảo
 https://chatgpt.com/share/677e0726-e120-800a-95fb-afc55633bfbb
 
