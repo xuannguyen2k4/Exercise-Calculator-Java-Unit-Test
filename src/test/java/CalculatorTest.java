@@ -22,6 +22,12 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testAdd_LargeValues_ReturnsCorrectResult() {
+        assertEquals(Integer.MAX_VALUE, calculator.add(Integer.MAX_VALUE, 0));
+        assertEquals(0, calculator.add(Integer.MAX_VALUE, -Integer.MAX_VALUE));
+    }
+
+    @Test
     public void testSubtract_ValidValues_ReturnsCorrectResult() {
         assertEquals(1, calculator.subtract(3, 2));
         assertEquals(-1, calculator.subtract(-2, -1));
@@ -45,8 +51,13 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testDivide_InvalidValue_ThrowsIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> calculator.divide(6, 0));
+    public void testDivide_ByZero_ThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> calculator.divide(1, 0));
+    }
+
+    @Test
+    public void testDivide_LargeValue_ReturnsCorrectResult() {
+        assertEquals(1, calculator.divide(Integer.MAX_VALUE, Integer.MAX_VALUE));
     }
 
     @Test
@@ -57,6 +68,11 @@ public class CalculatorTest {
     @Test
     public void testModulus_InvalidValue_ThrowsIllegalArgumentException() {
         assertThrows(IllegalArgumentException.class, () -> calculator.modulus(7, 0));
+    }
+
+    @Test
+    public void testModulus_LargeValue_ReturnsCorrectResult() {
+        assertEquals(0, calculator.modulus(Integer.MAX_VALUE, Integer.MAX_VALUE));
     }
 
     @Test
